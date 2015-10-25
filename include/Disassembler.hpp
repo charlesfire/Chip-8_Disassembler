@@ -52,7 +52,7 @@ class Disassembler
         void SkpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
         void SknpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
         void LdVXDT(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
-        void LdVXk(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
+        void LdVXK(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
         void LdDTVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
         void LdSTVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);
         void AddIVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3);

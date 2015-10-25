@@ -92,137 +92,137 @@ void Disassembler::Sys0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b
 
 void Disassembler::Clear(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "CLEAR" << std::endl;
 }
 
 void Disassembler::Ret(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "RET" << std::endl;
 }
 
 void Disassembler::Jmp0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "JMP 0x" << std::hex << b3 << b2 << b1 << std::endl;
 }
 
 void Disassembler::Call0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "CALL 0x" << std::hex << b3 << b2 << b1 << std::endl;
 }
 
 void Disassembler::SkeVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKE V" << b3 << " 0x" << b2 << b3 << std::endl;
 }
 
 void Disassembler::SkneVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKNE V" << b3 << " 0x" << b2 << b3 << std::endl;
 }
 
 void Disassembler::SkeVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKE V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::LdVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD V" << b3 << " 0x" << b2 << b3 << std::endl;
 }
 
 void Disassembler::AddVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "ADD V" << b3 << " 0x" << b2 << b3 << std::endl;
 }
 
 void Disassembler::LdVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::OrVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "OR V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::AndVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "AND V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::XorVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "XOR V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::AddVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "ADD V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::SubVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SUB V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::ShrVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SHR V" << b3 << std::endl;
 }
 
 void Disassembler::SubnVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SUBN V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::ShlVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SHL V" << b3 << std::endl;
 }
 
 void Disassembler::SkneVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKNE V" << b3 << " V" << b2 << std::endl;
 }
 
 void Disassembler::LdI0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD I 0x" << std::hex << b3 << b2 << b1 << std::endl;
 }
 
 void Disassembler::JmpV00xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "JMP V0 0x" << std::hex << b3 << b2 << b1 << std::endl;
 }
 
 void Disassembler::RndVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "RND V" << b3 << " 0x" << b2 << b3 << std::endl;
 }
 
 void Disassembler::DrwVXVY0xN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "DRW V" << b3 << " V" << b2 << " 0x" << b1 << std::endl;
 }
 
 void Disassembler::SkpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKP V" << b3 << std::endl;
 }
 
 void Disassembler::SknpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "SKNP V" << b3 << std::endl;
 }
 
 void Disassembler::LdVXDT(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD V" << b3 << " DT" << std::endl;
 }
 
-void Disassembler::LdVXk(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+void Disassembler::LdVXK(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD V" << b3 << " K" << std::endl;
 }
 
 void Disassembler::LdDTVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
@@ -257,5 +257,5 @@ void Disassembler::LdMVX(std::ostream& out, const uint8_t b1, const uint8_t b2, 
 
 void Disassembler::LdVXM(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
-
+    out << "LD V" << b3 << " M" << std::endl;
 }
