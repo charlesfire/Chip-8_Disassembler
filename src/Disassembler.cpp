@@ -85,7 +85,177 @@ bool Disassembler::Disassemble(std::ostream& out)
     return true;
 }
 
-void Disassembler::Sys0xNNN(std::ostream& out, uint8_t b1, uint8_t b2, uint8_t b3)
+void Disassembler::Sys0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
 {
     out << "SYS 0x" << std::hex << b3 << b2 << b1 << std::endl;
+}
+
+void Disassembler::Clear(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::Ret(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::Jmp0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::Call0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SkeVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SkneVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SkeVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::AddVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::OrVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::AndVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::XorVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::AddVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SubVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::ShrVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SubnVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::ShlVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SkneVXVY(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdI0xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::JmpV00xNNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::RndVX0xNN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::DrwVXVY0xN(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SkpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::SknpVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdVXDT(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdVXk(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdDTVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdSTVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::AddIVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdNVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdDVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdMVX(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
+}
+
+void Disassembler::LdVXM(std::ostream& out, const uint8_t b1, const uint8_t b2, const uint8_t b3)
+{
+
 }
