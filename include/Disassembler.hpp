@@ -11,7 +11,7 @@ class Disassembler
 {
     public:
         Disassembler();
-        virtual ~Disassembler();
+        virtual ~Disassembler() = default;
         bool LoadAssembly(const std::string& path);
         bool Disassemble(std::ostream& out);
 
