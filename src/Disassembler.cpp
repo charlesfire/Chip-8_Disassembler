@@ -1,7 +1,5 @@
 #include "Disassembler.hpp"
 #include <iostream>
-#include <fstream>
-#include <functional>
 #include "OpcodesMatcher.hpp"
 
 std::array<uint16_t, Disassembler::Opcodes::NBOPCODE> Disassembler::Opcodes::mask;
@@ -46,31 +44,23 @@ Disassembler::Disassembler() : program(), mapper()
     Disassembler::Opcodes::mask[34] = 0xF0FF; Disassembler::Opcodes::id[34] = 0xF065; mapper[34] = &Disassembler::LdVXM;       /* FX65 */
 }
 
-bool Disassembler::LoadAssembly(const std::string& path)
+bool Disassembler::LoadAssembly(std::istream& in)
 {
-    std::ifstream file;
-    std::streampos fileSize;
-    char* buffer = nullptr;
-    file.open(path, std::ios::in|std::ios::binary|std::ios::ate);
-    if (file.is_open())
+    in.seekg(0, std::ios::end);
+    std::streampos inSize = in.tellg();
+    if (inSize % 2)
+        return false;
+    char* buffer = new char [inSize];
+    in.seekg (0, std::ios::beg);
+    in.read (buffer, inSize);
+
+    for (int i(0); i < inSize; ++i)
     {
-        fileSize = file.tellg();
-        if (fileSize % 2)
-            return false;
-        buffer = new char [fileSize];
-        file.seekg (0, std::ios::beg);
-        file.read (buffer, fileSize);
-        file.close();
-
-        for (int i(0); i < fileSize; ++i)
-        {
-            program.push_back((buffer[i] << 8) + buffer[++i]);
-        }
-
-        delete[] buffer;
-        return true;
+        program.push_back((buffer[i] << 8) + buffer[++i]);
     }
-    return false;
+
+    delete[] buffer;
+    return true;
 }
 
 bool Disassembler::Disassemble(std::ostream& out)

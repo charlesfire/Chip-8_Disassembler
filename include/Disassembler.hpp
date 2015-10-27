@@ -4,6 +4,7 @@
 #include <array>
 #include <functional>
 #include <ostream>
+#include <istream>
 #include <string>
 #include <vector>
 
@@ -12,7 +13,7 @@ class Disassembler
     public:
         Disassembler();
         virtual ~Disassembler() = default;
-        bool LoadAssembly(const std::string& path);
+        bool LoadAssembly(std::istream& in);
         bool Disassemble(std::ostream& out);
 
         struct Opcodes
